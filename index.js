@@ -1,7 +1,8 @@
 let charCount = document.getElementById('char'),
     wordCount = document.getElementById('word'),
     sentence = document.getElementById('sentence'),
-    spaces = document.getElementById('punctuation');
+    spaces = document.getElementById('spaces'),
+    punctuation = document.getElementById('punctuation');
 
 const textArea = document.querySelector('.text-entry textarea'),
       processBtn = document.getElementById('process-btn');
