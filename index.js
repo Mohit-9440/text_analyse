@@ -29,10 +29,10 @@ function findWord(text){
     //splitting on the new line character
 
     let tempList = [];
-    tempText.forEach(word => tempList.push(word.split("")));
+    tempText.forEach(word => tempList.push(word.split(" ")));
     function extract(arr){
-        return arr.reduce((wordlist, word) => {
-            return wordlist.concat(Array.isArray(word) ? extract
+        return arr.reduce((wordList, word) => {
+            return wordList.concat(Array.isArray(word) ? extract
             (word) : word);
         }, []);
     }
@@ -47,7 +47,7 @@ function findSentence(text){
 }
 
 function findPunctuation(text){
-    const regex = /[.,?;:!-'"(){}]/g;
+    const regex = /[.,?;:!-'"(){}-]/g;
     let puncCount = text.match(regex);
     return puncCount ? puncCount.length : 0;
 }
